@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <title>Recommender Sys</title>
+    <style>
+        .container_1{
+            max-width: 750px;
+            margin-top: 10%;
+            background-color: #E6EE9C;
+            height: 290px;
+        }
+        .container_2a{
+            max-width: 750px;
+            margin-top: 5%;
+            background-color: #E6EE9C;
+            height: 1420px;
+        }
+
+        .container_2{
+            max-width: 750px;
+            margin-top: -2% !important;
+            background-color: #E6EE9C;
+            height: 378px;
+        }
+
+        .img-ecom{
+                width: 600px;
+                height: 197px;
+                margin-left: 29%;
+                margin-bottom: -210px;
+                margin-top: 4%;
+        }
+
+        .get4{
+            padding-top: 14%;
+            padding-bottom: 0%;
+        }
+
+        .get5{
+            padding-top:3%;
+        }
+
+        .input-group{
+            margin-top: 2%;
+        }
+
+        .btn{
+            margin-left: 43%;
+            background-color: #D4E157;
+        }
+
+        .btn-2{
+            margin-top:2%;
+            margin-left:23%;
+        }
+
+        .inp_u{
+            max-width: 610px;
+            margin-left: 8%;
+            margin-top: 2%;
+        }
+
+        #span_1{
+            Background-color: #E6EE9C !important;
+            color: Black;
+        }
+
+        .badge{
+            background-color: #D4E157 !important;
+            color: Black;
+            margin-top: 1%;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        function myFunction() {
+  var x = document.getElementById("container-result");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+    </script>
+
+</head>
+<body>
+<!-- As a heading -->
+<nav class="navbar" style="background-color: #D4E157;">
+  <div class="container-fluid">
+    <span  class="navbar-brand mb-0 h1">Recommender System</span>
+  </div>
+</nav>
+
+<img src="/static/img.png" class="img-ecom">
+
+<!--Main Container: Input-->
+<div class="container-md container_1" id="container-main">
+  <h4 class="text-center get4">Get Product Recommendation here</h4>
+    <form method="POST">
+  <div class="mb-3 inp_u">
+      <!--Get user Input -->
+      <input type="text" class="form-control" id="user_input" placeholder="Enter username" name="user_inp">
+      <span class="badge bg-primary" id="span_1">Recent Users: </span>
+      <span class="badge bg-primary">01impala</span>
+      <span class="badge bg-success">jimmy</span>
+      <span class="badge bg-secondary">00sab00</span>
+      <span class="badge bg-success">angela</span>
+      <span class="badge bg-success">darcy</span>
+      <span class="badge bg-success">anne</span>
+  </div>
+  <button type="submit" class="btn btn-outline-light btn-lg text-center" id="myInput" value="UI" name="submit_btn" onclick="myFunction2()">Submit</button>
+</form>
+</div>
+
+<!--Top 20 products-->
+<div id="container-result">
+<div class = "container-md container_2a" >
+<div class="modal-body"><h4 class="text-center get5">Your Top 20 product Recommedations</h4>
+    <h6 class="text-center get42">User: {{username}}</h6>
+    <ul class="list-group lsg">
+        <li class="list-group-item">1. {{P1}}</li>
+        <li class="list-group-item">2. {{P2}}</li>
+        <li class="list-group-item">3. {{P3}}</li>
+        <li class="list-group-item">4. {{P4}}</li>
+        <li class="list-group-item">5. {{P5}}</li>
+        <li class="list-group-item">6. {{P6}}</li>
+        <li class="list-group-item">7. {{P7}}</li>
+        <li class="list-group-item">8. {{P8}}</li>
+        <li class="list-group-item">9. {{P9}}</li>
+        <li class="list-group-item">10. {{P10}}</li>
+        <li class="list-group-item">11. {{P11}}</li>
+        <li class="list-group-item">12. {{P12}}</li>
+        <li class="list-group-item">13. {{P13}}</li>
+        <li class="list-group-item">14. {{P14}}</li>
+        <li class="list-group-item">15. {{P15}}</li>
+        <li class="list-group-item">16. {{P16}}</li>
+        <li class="list-group-item">17. {{P17}}</li>
+        <li class="list-group-item">18. {{P18}}</li>
+        <li class="list-group-item">19. {{P19}}</li>
+        <li class="list-group-item">20. {{P20}}</li>
+</ul>
+    <p class="text-center" style="margin-top:1%;">Scroll down for 5 best recommended products</p>
+</div>
+
+<!-- Final 5 Product Container-->
+<div class = "container-md container_2">
+<div class="modal-body"><h4 class="text-center get5">Your 5 best recommendations[Sentiment Analysis Powered]</h4>
+    <h6 class="text-center get42">User: {{username}}</h6>
+    <ul class="list-group lsg">
+        <li class="list-group-item">1. {{Prod_1}}</li>
+        <li class="list-group-item">2. {{Prod_2}}</li>
+        <li class="list-group-item">3. {{Prod_3}}</li>
+        <li class="list-group-item">4. {{Prod_4}}</li>
+        <li class="list-group-item">5. {{Prod_5}}</li>
+</ul>
+    <button type="button" class="btn btn-outline-light btn-lg text-center btn-2" onclick="myFunction()">Get Recommendation for another User</button>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
